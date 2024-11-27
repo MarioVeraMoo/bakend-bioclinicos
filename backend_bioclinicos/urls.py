@@ -21,6 +21,7 @@ from drf_yasg import openapi
 
 from patients.api.router import router_patients
 from doctor.api.router import router_doctors
+from categories.api.router import router_categories
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -41,5 +42,6 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('api/', include('users.api.router')),
     path('api/', include(router_patients.urls)),
-    path('api/', include(router_doctors.urls))
+    path('api/', include(router_doctors.urls)),
+    path('api/', include(router_categories.urls))
 ]
