@@ -24,6 +24,7 @@ from doctor.api.router import router_doctors
 from categories.api.router import router_categories
 from exams.api.router import router_exams
 from subexams.api.router import router_subexams
+from tests.api.router import router_tests
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -47,5 +48,6 @@ urlpatterns = [
     path('api/', include(router_doctors.urls)),
     path('api/', include(router_categories.urls)),
     path('api/', include(router_exams.urls)),
-    path('api/', include(router_subexams.urls))
+    path('api/', include(router_subexams.urls)),
+    path('api/', include(router_tests.urls))
 ]

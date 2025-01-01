@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'doctor',
     'categories',
     'exams',
-    'subexams'
+    'subexams',
+    'tests',
+    'reference_values'
 ]
 
 MIDDLEWARE = [
